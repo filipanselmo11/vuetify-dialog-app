@@ -1,10 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
+    <v-app-bar app color="primary" dark>
       <div class="d-flex align-center">
         <v-img
           alt="Vuetify Logo"
@@ -36,24 +32,21 @@
         <v-icon>mdi-open-in-new</v-icon>
       </v-btn>
     </v-app-bar>
-    <br/>
-    <br/>
+    <br />
+    <br />
 
     <v-main>
-      <HelloWorld/>
+      <other-dialog-component></other-dialog-component>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import OtherDialogComponent from "./components/OtherDialogComponent.vue";
 
 export default {
-  name: 'App',
-
-  components: {
-    HelloWorld,
-  },
+  components: { OtherDialogComponent },
+  name: "App",
 
   data: () => ({
     //
