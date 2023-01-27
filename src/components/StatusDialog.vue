@@ -2,8 +2,14 @@
   <v-dialog v-model="showDialog" max-width="500px">
     <v-card>
       <v-card-title>Título do Dialog</v-card-title>
+      <v-card-subtitle
+        >Selecione o status das áreas vinculadas à empresa x</v-card-subtitle
+      >
       <v-card-text>
-        Tabela
+        <div class="status-checkbox">
+          <v-checkbox v-model="showCheckbox"></v-checkbox>
+        </div>
+        <v-data-table hide-default-footer> </v-data-table>
       </v-card-text>
       <v-divider></v-divider>
       <v-card-actions>
@@ -22,7 +28,7 @@
 <script>
 export default {
   name: "StatusDialog",
-  props: ["dialog"],
+  props: ["dialog", "checkbox"],
   computed: {
     showDialog: {
       get() {
@@ -34,9 +40,16 @@ export default {
         }
       },
     },
+    showCheckbox: {
+      get() {
+        return this.checkbox;
+      },
+      set(value) {
+        console.log(value);
+      }
+    },
   },
 };
 </script>
 
-<style>
-</style>
+<style></style>

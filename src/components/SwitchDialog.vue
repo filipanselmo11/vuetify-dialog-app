@@ -8,6 +8,7 @@
     </v-switch>
     <status-dialog
     :dialog="showDialog"
+    :checkbox="showCheckbox"
     @close="showDialog=false"></status-dialog>
   </div>
 </template>
@@ -21,6 +22,7 @@ export default {
     data:() => ({
       status: false,
       showDialog: false,
+      showCheckbox: false,
     }),
 };
 </script>
