@@ -36,18 +36,20 @@
     <br />
 
     <v-main>
-      <other-dialog-component></other-dialog-component>
+      <switch-dialog></switch-dialog>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import OtherDialogComponent from "./components/OtherDialogComponent.vue";
+import SwitchDialog from './components/SwitchDialog.vue';
+// import PureDialogComponent from './components/PureDialogComponent.vue'
 
 export default {
-  components: { OtherDialogComponent },
+  components:{
+    SwitchDialog
+  },
   name: "App",
-
   data: () => ({
     //
   }),
